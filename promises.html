@@ -1,0 +1,16 @@
+<script>
+    var record = new Promise((res,rej)=>{
+        console.log(typeof res,typeof rej);
+        res("Task is completed")
+        //rej("Task is completed")
+    })      //three states of promises-pending,fulfilled,rejected
+    console.log(record);
+    record.then((value)=>{
+        //then is a handler for resolved values
+        console.log(value);
+    }).catch((error)=>{
+        console.log(error);
+    }).finally(()=>{
+        console.log("proceed for next task");
+    })      //finally will always be executed whether value gets res or rej     
+</script>

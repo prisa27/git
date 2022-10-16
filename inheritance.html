@@ -1,0 +1,24 @@
+<!-- getting values from parent class to child class -->
+<script>
+    class a{
+        my1(){
+            console.log("in class a");
+        }
+    }
+    class b extends a{      //inherit a in b by using extend keywrd (single level inheritane i.e 1 parent & 1 child)
+       
+        my2(){
+            
+            console.log("in class b");     //overrides parent class so use super.my1(); to access member from parent class
+        }
+        my1(){
+           // super.my1()       //accessing parent members
+            console.log("in class b my1");     
+        }
+    }
+    var rec = new b;
+    console.log(rec);
+    rec.my1();      //we've created obj using class b so class b method will be called here
+    rec.my2();
+    
+</script>

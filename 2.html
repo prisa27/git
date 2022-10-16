@@ -1,0 +1,15 @@
+<script>
+    class tv{      // class is a pure storage area
+        constructor(){
+            console.log("this is constructor");     //all initialization must be done in constructor
+            this.channel = "sony"       //this means current class having property name channel
+        }
+        volume(){
+            console.log("dolby sound");     //by default constructor will be there in console
+            console.log(this.channel);
+        }
+    }
+    var remote = new tv();      //instance creation
+    var remote1 = new tv();
+    remote.volume();
+</script>
